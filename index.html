@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Passion Planner Data Viz?</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-route.js"></script>
+    <script src="passionPlanner.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+  </head>
+  <body ng-app="passionPlanner" ng-controller="passionPlannerCntrl">
+    <div ng-repeat="goal in goals">
+      <h4 ng-bind="goal.name"></h4>
+      <p ng-bind="goal.description"></p>
+      <p ng-bind="goal.due_date"></p>
+      <input type="checkbox" ng-model="goal.completed"/>
+      <button ng-click="addGoal()">Add goal</button>
+    </div>
+  </body>
+</html>
